@@ -1,0 +1,27 @@
+y <- c(1,5,4,8,9,3)
+x <- c('A','B','C','A','B','C')
+quanthub = data.frame(y,x)
+
+model <- lm(y~x, data = quanthub)
+
+my_fun <- function(x){
+  if (is.numeric(x)){
+    print('Yes')
+  }else{
+    print('No')
+  }
+}
+data("USAccDeaths")
+data('precip')
+library(pca)
+pca = preProcess(x = USAccDeaths, method='pca', thresh=0.7, pcaComp=2)
+new_data = predict(pca, USAccDeaths)
+
+x <- floor(runif(1,1,6))
+x <- 2
+if (any(1:5==x)||x==5) print('yes') else print('no')
+if (1:5==x|x==5) print('yes') else print('no')
+x
+
+data('Nile')
+while
